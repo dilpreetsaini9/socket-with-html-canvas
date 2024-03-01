@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Canvas Drawing App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <h2>Mini World</h2>
+        <div class="main-wrapper">
+            <div class="canvas-wrapper">
+                <div class="tools">
+                    <div class="color util-flex">
+                        <label for="color">Color </label>
+                        <input type="color" id="color" value="#000000">
+                    </div>
+                    <div class="size util-flex">
+                        <label for="size">Brush Stroke </label>
+                        <select id="size">
+                            <option selected value="2">2pt</option>
+                            <option selected value="4">4pt</option>
+                            <option selected value="6">6pt</option>
+                            <option selected value="8">8pt</option>
+                            <option selected value="10">10pt</option>
+                        </select>
+                    </div>
+                </div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="chat-wrapper">
+                <div class="tools">
+                    <h3>LiveChat</h3>
+                    <div class="ring-container">
+                        <div class="ringring"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="chat">
+
+                </div>
+            </div>
+        </div>
+        <form class="input-bar">
+            <input type="text" placeholder="Live chat enabled" id="text-message">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
